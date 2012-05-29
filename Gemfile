@@ -6,6 +6,8 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'sandra'
+gem 'thrift_client', '0.7.0'
 
 
 # Gems used only for assets and not required
