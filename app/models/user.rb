@@ -8,8 +8,6 @@ end
 class User
   include Sandra
 
-  #attr_accessor :password, :password_confirmation
-
   has_secure_password
 
   key_attribute :username, :string
