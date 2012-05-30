@@ -2,6 +2,9 @@ RbiSt::Application.routes.draw do
 
   resources :users
 
+  post 'sign_up', :to => "users#create"
+  get 'sign_up', :to => "users#new"
+
   post 'login', :to => "sessions#create"
   get 'login', :to => "sessions#new"
   delete 'logout', :to => "sessions#destroy"
