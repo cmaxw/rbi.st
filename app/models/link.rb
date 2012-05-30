@@ -9,6 +9,18 @@ class Link
 
   before_save :initialize_path
 
+  def link
+    "http://rbi.st/#{path}"
+  end
+
+  def redirect_url
+    if url.match(/https?:\/\//)
+      url
+    else
+      "http://#{url}"
+    end
+  end
+
   private
 
   def initialize_path

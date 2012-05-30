@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  $(".new_link").submit(function(e) {
+    e.preventDefault();
+    var form = $(e.currentTarget);
+    $.ajax({url: form.attr('action'),
+            data: form.serialize(),
+            type: 'POST',
+            success: function(data) {
+              $(".new_link new_url").remove();
+              $(".new_link").append("<p class=\"new_url\">Your new URL is <a href=\"" + 
+                                    data + "\">" + data + "</a>.</p>")
+            }
+    });
+  });
+});
