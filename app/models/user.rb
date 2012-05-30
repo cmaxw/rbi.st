@@ -8,7 +8,7 @@ end
 class User
   include Sandra
 
-  attr_accessor :password, :password_confirmation
+  #attr_accessor :password, :password_confirmation
 
   has_secure_password
 
