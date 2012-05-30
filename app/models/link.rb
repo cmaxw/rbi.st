@@ -6,4 +6,12 @@ class Link
   column :created_at, :datetime
 
   validates :url, :presence => true
+
+  before_save :initialize_path
+
+  private
+
+  def initialize_path
+    self.path ||= RandomString.create(6)
+  end
 end

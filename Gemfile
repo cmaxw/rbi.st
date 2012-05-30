@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'sandra'
+gem 'sandra', :path => '../Ruby/Sandra'
 gem 'thrift_client', '0.7.0'
 
 
@@ -27,10 +27,12 @@ gem 'jquery-rails'
 group :development do
   gem 'rspec-rails'
   gem 'pry'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

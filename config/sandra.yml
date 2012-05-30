@@ -1,5 +1,10 @@
 development:
   keyspace: rbist
-  host: localhost
+  host: 127.0.0.1
+  port: 9160
+
+test:
+  keyspace: rbist_test
+  host: 127.0.0.1
   port: 9160
 
